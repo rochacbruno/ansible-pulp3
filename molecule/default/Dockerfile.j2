@@ -48,9 +48,6 @@ elif [[ "$(source /etc/os-release && echo "$ID")" == 'fedora' ]]; then \
   dnf clean all ;\
 fi
 
-# Disable requiretty.
-RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
-
 VOLUME ["/sys/fs/cgroup", "/tmp", "/run"]
 
 CMD ["/usr/sbin/init"]

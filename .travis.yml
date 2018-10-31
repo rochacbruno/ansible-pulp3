@@ -23,5 +23,6 @@ matrix:
 install:
   - pip install --upgrade pip
   - pip install tox
+  - pip install docker
 script:
   - tox
